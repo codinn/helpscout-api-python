@@ -57,7 +57,7 @@ class Client(object):
 
     def customer(self, customer_id, fields=None, **kwargs):
         url = add_fields("customers/{}.json".format(customer_id), fields)
-        return self.page(url, "Customer", 200, **kwargs)
+        return self.item(url, "Customer", 200, **kwargs)
 
     def user(self, user_id, fields=None):
         url = add_fields("users/{}.json".format(user_id), fields)
